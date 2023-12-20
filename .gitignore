@@ -1,0 +1,7 @@
+*
+!*/
+*/build/
+!*.c
+!*.h
+!Makefile
+!README
