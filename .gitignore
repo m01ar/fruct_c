@@ -3,6 +3,7 @@
 */build/
 !*.c
 !*.h
+!*.txt
 !Makefile
 !README
 !.gitignore
