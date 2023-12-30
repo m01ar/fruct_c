@@ -4,7 +4,7 @@ TASK3=asciiart
 
 WD=build
 CC=gcc
-CFLAGS=-std=c99 -Wall -Werror -Wpedantic
+CFLAGS=-std=c99 -Wall -Wextra -Werror -Wpedantic
 
 all: 1 2 3
 
