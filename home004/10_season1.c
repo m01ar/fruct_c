@@ -23,6 +23,7 @@ int main(void)
 {
 	int input;
 	scanf("%d", &input);
+
 	switch (input)
 	{
 		case 12:
@@ -47,5 +48,6 @@ int main(void)
 			break;
 		default:;
 	}
+
 	return 0;
 }

@@ -17,5 +17,15 @@
 
 int main(void)
 {
+	int a, b;
+	scanf("%d%d", &a, &b);
+
+	int min = a, max = b;
+	if (min>max)
+		min = b, max = a;
+	printf("%d %d\n", min, max);
+
+//	printf("%d %d\n", a<b ? a : b, a>= b ? a : b);
+
 	return 0;
 }

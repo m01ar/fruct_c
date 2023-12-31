@@ -16,5 +16,16 @@
 
 int main(void)
 {
+	int i1, i2, i3, i4, i5;
+	scanf("%d%d%d%d%d", &i1, &i2, &i3, &i4, &i5);
+
+	int max = i1;
+	max = i2 > max ? i2 : max;
+	max = i3 > max ? i3 : max;
+	max = i4 > max ? i4 : max;
+	max = i5 > max ? i5 : max;
+
+	printf("%d\n", max);
+
 	return 0;
 }

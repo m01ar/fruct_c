@@ -16,5 +16,16 @@
 
 int main(void)
 {
+	int i1, i2, i3, i4, i5;
+	scanf("%d%d%d%d%d", &i1, &i2, &i3, &i4, &i5);
+
+	int min = i1;
+	min = i2 < min ? i2 : min;
+	min = i3 < min ? i3 : min;
+	min = i4 < min ? i4 : min;
+	min = i5 < min ? i5 : min;
+
+	printf("%d\n", min);
+
 	return 0;
 }
