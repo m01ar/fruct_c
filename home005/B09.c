@@ -19,7 +19,22 @@ B9 Урок 5 ДЗ 3
 
 #include <stdio.h>
 
+#define BASE	10  // Основание системы счисления
+
 int main(void)
 {
+	int number;
+	scanf("%d", &number);
+
+	int has_odd = 0; // Флаг наличия нечетной цифры
+	for (int digit; number > 0 && !has_odd; number /= BASE)
+		if (digit = number % BASE, digit % 2)
+			has_odd = 1;
+
+	if (has_odd)
+		printf("NO" "\n");
+	else
+		printf("YES" "\n");
+
 	return 0;
 }
