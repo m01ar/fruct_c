@@ -20,7 +20,24 @@ B11 ДЗ 5
 
 #include <stdio.h>
 
+#define BASE	10  // Количество пальцев на ногах
+
 int main(void)
 {
+	int num;
+	scanf("%d", &num);
+
+	int result;
+	result = num % BASE;
+	num /= BASE;
+	while (num > 0)
+	{
+		result *= BASE;
+		result += num % BASE;
+		num /= BASE;
+	}
+
+	printf("%d\n", result);
+
 	return 0;
 }
