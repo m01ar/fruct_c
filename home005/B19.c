@@ -18,7 +18,27 @@ B19
 
 #include <stdio.h>
 
+#define BASE	10
+#define TARGET	10
+
 int main(void)
 {
+	int num;
+	scanf("%d", &num);
+
+	int sum = 0, flag = 0;
+	while (num > 0 && !flag && sum <= TARGET)
+	{
+		sum += num % BASE;
+		if (sum == TARGET)
+			flag = 1;
+		num /= BASE;
+	}
+
+	if (flag)
+		printf("YES" "\n");
+	else
+		printf("NO" "\n");
+
 	return 0;
 }

@@ -22,5 +22,18 @@ B20
 
 int main(void)
 {
+	int num;
+	scanf("%d", &num);
+
+	int isprime = 1;
+	for (int n = num - 1; n > 1 && isprime; n--)
+		if (!(num % n))
+			isprime = 0;
+
+	if (isprime)
+		printf("YES" "\n");
+	else
+		printf("NO" "\n");
+
 	return 0;
 }

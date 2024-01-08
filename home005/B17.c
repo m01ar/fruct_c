@@ -28,7 +28,28 @@ B17 ДЗ 5
 
 #include <stdio.h>
 
+#define BASE	10
+
 int main(void)
 {
+	int num;
+	scanf("%d", &num);
+
+	for (int i = 10; i <= num; i++)
+	{
+		int cur = i, digit, sum = 0, prod = 1;
+		while (cur > 0)
+		{
+			digit = cur % BASE;
+			sum += digit;
+			prod *= digit;
+			cur /= BASE;
+		}
+		if (sum == prod)
+			printf("%d ", i);
+	}
+
+	printf("\n");
+
 	return 0;
 }

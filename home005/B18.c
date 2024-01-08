@@ -28,5 +28,24 @@ B18 Будет решена в следующей лекции
 
 int main(void)
 {
+	int num;
+	scanf("%d", &num);
+
+	long double a = 1, b = 1, sum = 0;
+	for (int i = 1; i <= num; i++)
+		switch(i) {
+			case 1:
+			case 2:
+				printf("1 ");
+				break;
+			default:
+				sum = a + b;
+				a = b;
+				b = sum;
+				printf("%.0Lf ", sum);
+		}
+
+	printf("\n");
+
 	return 0;
 }

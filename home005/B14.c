@@ -25,7 +25,16 @@ B14 Практика 3
 
 #include <stdio.h>
 
+#define END_MARKER	0
+
 int main(void)
 {
+	int cnt = 0, num;
+
+	while (scanf("%d", &num) == 1 && num != END_MARKER)
+		cnt++;
+
+	printf("%d\n", cnt);
+
 	return 0;
 }

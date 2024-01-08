@@ -23,7 +23,17 @@ B15 Демо 3
 
 #include <stdio.h>
 
+#define END_MARKER	0
+
 int main(void)
 {
+	int even_cnt = 0, num;
+
+	while (scanf("%d", &num) == 1 && num != END_MARKER)
+		if (!(num % 2))
+			even_cnt++;
+
+	printf("%d\n", even_cnt);
+
 	return 0;
 }

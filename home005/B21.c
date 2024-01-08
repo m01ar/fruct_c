@@ -27,7 +27,19 @@ B21 На следующей лекции
 
 #include <stdio.h>
 
+#define END_MARKER	'.'
+#define CAP_SHIFT	32
+
 int main(void)
 {
+	char ch;
+	while (scanf("%c", &ch) == 1 && ch != END_MARKER)
+		if (ch >= 'A' && ch <= 'Z')
+			printf("%c", ch + CAP_SHIFT);
+		else
+			printf("%c", ch);
+
+	puts("");
+
 	return 0;
 }
