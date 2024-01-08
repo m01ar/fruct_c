@@ -20,7 +20,37 @@ B7 Урок 5 Демонстрация 2
 
 #include <stdio.h>
 
+#define BASE 10 // Основание системы счисления
+
 int main(void)
 {
+	int number;
+	scanf("%d", &number);
+
+	int flag = 0,  // Флаг выхода из циклов
+		subnumber, // Область поиска парной цифры
+		digit_R,   // Правая цифра (искомая)
+		digit_L;   // Левая цифра (сравниваемая)
+
+	while (number > 0 && !flag)
+	{
+		digit_R = number % BASE;
+		number /= BASE;
+		subnumber = number;
+		while (subnumber > 0 && !flag)
+		{
+			digit_L = subnumber % BASE;
+			if (digit_L == digit_R)
+				flag = 1;
+			else
+				subnumber /= BASE;
+		}
+	}
+
+	if (flag)
+		printf("YES" "\n");
+	else
+		printf("NO" "\n");
+
 	return 0;
 }
