@@ -1,3 +1,3 @@
 mkdir split && cd $_
-csplit -b '%02d_description' -f 'C' ../README '/^C/' {*}; rm C00
+csplit -b '%02d_description' -f 'C' ../README '/^C/' {*}; rm C00*
 for i in C*; do (echo '/*'; head -n-3 $i; echo -e '*\\\n'; cat template) > ../$i.c; rename _description '' ../*.c; done
