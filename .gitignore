@@ -6,4 +6,5 @@
 !*.txt
 !Makefile
 !README
+!NOTES
 !.gitignore
