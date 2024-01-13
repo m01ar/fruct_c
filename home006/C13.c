@@ -13,7 +13,7 @@ float cosinus(float x)
 Пример
 Данные на входе: 		60 
 Данные на выходе: 	0.500
-*\
+*/
 
 #include <stdio.h>
 

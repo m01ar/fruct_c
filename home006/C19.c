@@ -14,7 +14,7 @@ int digit_to_num(char c)
 Пример №2
 Данные на входе: 		abc 1def2 3. 
 Данные на выходе: 	6 
-*\
+*/
 
 #include <stdio.h>
 

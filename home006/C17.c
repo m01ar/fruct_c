@@ -16,7 +16,7 @@ int is_happy_number(int n)
 Пример №2
 Данные на входе: 		528 
 Данные на выходе: 	NO
-*\
+*/
 
 #include <stdio.h>
 

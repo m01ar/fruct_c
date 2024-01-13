@@ -12,14 +12,45 @@ C20 Задача со *
 
 Пример №2
 Данные на входе: 		()(. 
-*\
+*/
 
 #include <stdio.h>
 
+#define END_MARK	'.'
+
+int input_parens(void)
+{
+	char ch;
+	int cnt = 0;
+	while (scanf("%c", &ch) == 1 && ch != END_MARK)
+	{
+		switch (ch)
+		{
+			case '(':
+				cnt++;
+				break;
+			case ')':
+				cnt--;
+				break;
+		}
+	}
+	return cnt;
+}
+
+
+int is_input_valid(int (*f)(void))
+{
+	return 0 == f();
+}
+
+
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+	if (is_input_valid(input_parens))
+		printf("YES" "\n");
+	else
+		printf("NO" "\n");
 
 	return 0;
 }
+

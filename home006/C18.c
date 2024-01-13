@@ -16,7 +16,7 @@ int is_digit(char c)
 Пример №2
 Данные на входе: 		abcd. 
 Данные на выходе: 	0
-*\
+*/
 
 #include <stdio.h>
 

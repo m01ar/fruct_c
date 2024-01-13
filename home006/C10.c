@@ -14,7 +14,7 @@ void print_simple(int n)
 Пример №2
 Данные на входе: 		120 
 Данные на выходе: 	2 2 2 3 5
-*\
+*/
 
 #include <stdio.h>
 
