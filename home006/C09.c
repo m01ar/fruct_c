@@ -14,10 +14,22 @@ int factorial(int n)
 
 #include <stdio.h>
 
+int factorial(int n)
+{
+	int result = 1;
+	while (n > 0)
+		result *= n--;
+
+	return result;
+}
+
+
 int main(void)
 {
 	int number;
 	scanf("%d", &number);
+
+	printf("%d\n", factorial(number));
 
 	return 0;
 }
