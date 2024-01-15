@@ -17,10 +17,22 @@ C2  Демо 1
 
 #include <stdio.h>
 
+int pwr(int n, int p)
+{
+	int result = 1;
+	while (p > 0)
+		result *= n, p--;
+
+	return result;
+}
+
+
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+	int num, pow;
+	scanf("%d%d", &num, &pow);
+
+	printf("%d\n", pwr(num, pow));
 
 	return 0;
 }
