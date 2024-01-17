@@ -35,7 +35,7 @@ int next_digit(int *num)
 
 
 // Возвращает 1, если сумма цифр в числе чётна, иначе 0
-int is_num_ascending(int num)
+int grow_up(int num)
 {
 	int prev_digit = next_digit(&num);
 
@@ -54,7 +54,7 @@ int main(void)
 	int number;
 	scanf("%d", &number);
 
-	if (is_num_ascending(number))
+	if (grow_up(number))
 		printf("YES" "\n");
 	else
 		printf("NO" "\n");
