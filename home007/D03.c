@@ -28,10 +28,7 @@ D3 Практик 1
 void print_digit(int n)
 {
     if (!n)
-    {
-        puts("");
         return;
-    }
     printf("%d ", n % BASE);
     print_digit(n / BASE);
 }
@@ -43,6 +40,7 @@ int main(void)
 	scanf("%d", &number);
 
     print_digit(number);
+    puts("");
 
 	return 0;
 }
