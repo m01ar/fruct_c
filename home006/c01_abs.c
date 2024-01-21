@@ -14,16 +14,16 @@ C1 Решена на лекции
 
 int abs(int n)
 {
-	return n < 0 ? -n : n;
+    return n < 0 ? -n : n;
 }
 
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+    int number;
+    scanf("%d", &number);
 
-	printf("%d\n", abs(number));
+    printf("%d\n", abs(number));
 
-	return 0;
+    return 0;
 }

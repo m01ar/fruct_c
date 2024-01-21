@@ -23,27 +23,27 @@
 
 long to_base(int n, int p)
 {
-	long result = 0;
-	long shift = 1;
+    long result = 0;
+    long shift = 1;
 
-	while (n >= p)
-	{
-		result += (n % p) * shift;
-		n /= p;
-		shift *= 10;
-	}
-	result += n * shift;
+    while (n >= p)
+    {
+        result += (n % p) * shift;
+        n /= p;
+        shift *= 10;
+    }
+    result += n * shift;
 
-	return result;
+    return result;
 }
 
 
 int main(void)
 {
-	int num1, num2;
-	scanf("%d%d", &num1, &num2);
+    int num1, num2;
+    scanf("%d%d", &num1, &num2);
 
-	printf("%ld\n", to_base(num1, num2));
+    printf("%ld\n", to_base(num1, num2));
 
-	return 0;
+    return 0;
 }

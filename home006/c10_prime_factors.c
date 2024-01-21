@@ -29,23 +29,23 @@ void print_simple(int n)
 
 void print_prime_factors(int n)
 {
-	for (; !(n % 2); n /= 2)
-		printf("2 ");
+    for (; !(n % 2); n /= 2)
+        printf("2 ");
 
-	for (int i = 3; i <= sqrt(n); i += 2)
-		for (; !(n % i); n /= i)
-			printf("%d ", i);
+    for (int i = 3; i <= sqrt(n); i += 2)
+        for (; !(n % i); n /= i)
+            printf("%d ", i);
 
-	if (n > 2)
-		printf("%d ", n);
+    if (n > 2)
+        printf("%d ", n);
 }
 
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
-	print_prime_factors(number);
-	puts("");
-	return 0;
+    int number;
+    scanf("%d", &number);
+    print_prime_factors(number);
+    puts("");
+    return 0;
 }

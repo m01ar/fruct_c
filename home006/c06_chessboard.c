@@ -24,19 +24,19 @@ C6* ДЗ
 
 long double beans(int cell)
 {
-	long double result = 1;
-	while (cell > 1)
-		result *= 2, cell--;
-	return result;
+    long double result = 1;
+    while (cell > 1)
+        result *= 2, cell--;
+    return result;
 }
 
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+    int number;
+    scanf("%d", &number);
 
-	printf("%.0Lf\n", beans(number));
+    printf("%.0Lf\n", beans(number));
 
-	return 0;
+    return 0;
 }

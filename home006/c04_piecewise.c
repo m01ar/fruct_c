@@ -26,30 +26,30 @@ x*x+4x+5  при x >= 2;
 
 #include <stdio.h>
 
-#define END_MARKER	0
+#define END_MARKER  0
 
 int math_f(int x)
 {
-	if (-2 <= x && x < 2)
-		return x*x;
-	if (x >= 2)
-		return x*x+4*x+5;
-	return 4;
+    if (-2 <= x && x < 2)
+        return x*x;
+    if (x >= 2)
+        return x*x+4*x+5;
+    return 4;
 }
 
 
 int main(void)
 {
-	int num;
-	int next, max = 0;
+    int num;
+    int next, max = 0;
 
-	while(scanf("%d", &num) == 1 && num != END_MARKER)
-	{
-		next = math_f(num);
-		max = next > max ? next : max;
-	}
-	
-	printf("%d\n", max);
+    while(scanf("%d", &num) == 1 && num != END_MARKER)
+    {
+        next = math_f(num);
+        max = next > max ? next : max;
+    }
+    
+    printf("%d\n", max);
 
-	return 0;
+    return 0;
 }

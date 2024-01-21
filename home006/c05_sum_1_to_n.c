@@ -17,19 +17,19 @@ C5 ДЗ
 
 int sum1N(int n)
 {
-	int sum = 0;
-	while (n > 0)
-		sum += n, n--;
-	return sum;
+    int sum = 0;
+    while (n > 0)
+        sum += n, n--;
+    return sum;
 }
 
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+    int number;
+    scanf("%d", &number);
 
-	printf("%d\n", sum1N(number));
+    printf("%d\n", sum1N(number));
 
-	return 0;
+    return 0;
 }

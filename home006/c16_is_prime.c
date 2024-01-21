@@ -25,23 +25,23 @@ int is_prime(int n)
 // Проверка на делимость тупым перебором.
 int is_prime(int num)
 {
-	for (int i = num/2; i > 1; i--)
-		if (num % i == 0)
-			return 0;
+    for (int i = num/2; i > 1; i--)
+        if (num % i == 0)
+            return 0;
 
-	return 1;
+    return 1;
 }
 
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+    int number;
+    scanf("%d", &number);
 
-	if (is_prime(number))
-		printf("YES" "\n");
-	else
-		printf("NO" "\n");
+    if (is_prime(number))
+        printf("YES" "\n");
+    else
+        printf("NO" "\n");
 
-	return 0;
+    return 0;
 }

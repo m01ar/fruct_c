@@ -24,28 +24,28 @@
 
 #include <stdio.h>
 
-#define END_MARKER	'.'
+#define END_MARKER  '.'
 
 int is_digit(char c)
 {
-	return c >= '0' && c <= '9';
+    return c >= '0' && c <= '9';
 }
 
 
 int digit_to_num(char c)
 {
-	return is_digit(c) ? (c - '0') : 0;
+    return is_digit(c) ? (c - '0') : 0;
 }
 
 
 int main(void)
 {
-	char ch;
-	int sum = 0;
-	while (scanf("%c", &ch) == 1 && ch != END_MARKER)
-		sum += digit_to_num(ch);
+    char ch;
+    int sum = 0;
+    while (scanf("%c", &ch) == 1 && ch != END_MARKER)
+        sum += digit_to_num(ch);
 
-	printf("%d\n", sum);
+    printf("%d\n", sum);
 
-	return 0;
+    return 0;
 }

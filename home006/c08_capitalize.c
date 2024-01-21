@@ -24,22 +24,22 @@
 
 #include <stdio.h>
 
-#define END_MARKER	'.'
+#define END_MARKER  '.'
 
 void read_to_upper()
 {
-	char ch;
-	while (scanf("%c", &ch) == 1 && ch != END_MARKER)
-	{
-		ch = (ch >= 'a' && ch <= 'z') ? ch - 'a' + 'A' : ch;
-		printf("%c", ch);
-	}
-	puts("");
+    char ch;
+    while (scanf("%c", &ch) == 1 && ch != END_MARKER)
+    {
+        ch = (ch >= 'a' && ch <= 'z') ? ch - 'a' + 'A' : ch;
+        printf("%c", ch);
+    }
+    puts("");
 }
 
 
 int main(void)
 {
-	read_to_upper();
-	return 0;
+    read_to_upper();
+    return 0;
 }

@@ -24,24 +24,24 @@
 
 #include <stdio.h>
 
-#define END_MARKER	'.'
+#define END_MARKER  '.'
 
 int is_digit(char c)
 {
-	return c >= '0' && c <= '9';
+    return c >= '0' && c <= '9';
 }
 
 
 int main(void)
 {
-	char ch;
-	int count = 0;
+    char ch;
+    int count = 0;
 
-	while (scanf("%c", &ch) == 1 && ch != END_MARKER)
-		if (is_digit(ch))
-			count++;
+    while (scanf("%c", &ch) == 1 && ch != END_MARKER)
+        if (is_digit(ch))
+            count++;
 
-	printf("%d\n", count);
+    printf("%d\n", count);
 
-	return 0;
+    return 0;
 }

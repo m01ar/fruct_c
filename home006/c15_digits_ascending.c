@@ -20,44 +20,44 @@ int grow_up(int n)
 
 #include <stdio.h>
 
-#define BASE	10
+#define BASE    10
 
 // Возвращает младший разряд числа, после чего число сдвигается (делится) на порядок
 int next_digit(int *num)
 {
-	int result;
-	if (*num == 0)
-		return -1;
-	result = *num % BASE;
-	*num /= BASE;
-	return result;
+    int result;
+    if (*num == 0)
+        return -1;
+    result = *num % BASE;
+    *num /= BASE;
+    return result;
 }
 
 
 // Возвращает 1, если сумма цифр в числе чётна, иначе 0
 int grow_up(int num)
 {
-	int prev_digit = next_digit(&num);
+    int prev_digit = next_digit(&num);
 
-	while (num > 0)
-	{
-		if (num % BASE > prev_digit)
-			return 0;
-		prev_digit = next_digit(&num);
-	}
-	return 1;
+    while (num > 0)
+    {
+        if (num % BASE > prev_digit)
+            return 0;
+        prev_digit = next_digit(&num);
+    }
+    return 1;
 }
 
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+    int number;
+    scanf("%d", &number);
 
-	if (grow_up(number))
-		printf("YES" "\n");
-	else
-		printf("NO" "\n");
+    if (grow_up(number))
+        printf("YES" "\n");
+    else
+        printf("NO" "\n");
 
-	return 0;
+    return 0;
 }
