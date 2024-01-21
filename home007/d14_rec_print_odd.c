@@ -43,5 +43,5 @@ int main(void)
 {
     print_odd();
     puts("");
-	return 0;
+    return 0;
 }

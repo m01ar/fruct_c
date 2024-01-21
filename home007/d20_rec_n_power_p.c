@@ -35,8 +35,8 @@ int recurs_power(int n, int p)
 
 int main(void)
 {
-	int num, pow;
-	scanf("%d %d", &num, &pow);
+    int num, pow;
+    scanf("%d %d", &num, &pow);
     printf("%d\n", recurs_power(num, pow));
-	return 0;
+    return 0;
 }

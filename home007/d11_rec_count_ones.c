@@ -32,10 +32,10 @@ int count_ones(int n)
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+    int number;
+    scanf("%d", &number);
 
     printf("%d\n", count_ones(number));
 
-	return 0;
+    return 0;
 }

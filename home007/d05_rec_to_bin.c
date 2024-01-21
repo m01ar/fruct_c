@@ -33,10 +33,10 @@ long to_binr(long n)
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+    int number;
+    scanf("%d", &number);
 
     printf("%ld\n", to_binr(number));
 
-	return 0;
+    return 0;
 }

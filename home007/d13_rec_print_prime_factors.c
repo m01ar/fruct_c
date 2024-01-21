@@ -59,9 +59,9 @@ void print_prime_factors(int n, int f)
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+    int number;
+    scanf("%d", &number);
     print_prime_factors(number, 2);
     puts("");
-	return 0;
+    return 0;
 }

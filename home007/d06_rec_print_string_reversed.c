@@ -42,5 +42,5 @@ int main(void)
 {
     reverse_string();
     puts("");
-	return 0;
+    return 0;
 }

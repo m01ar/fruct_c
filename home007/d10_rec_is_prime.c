@@ -42,10 +42,10 @@ int is_prime(int n, int delitel)
 
 int main(void)
 {
-	int num;
-	scanf("%d", &num);
+    int num;
+    scanf("%d", &num);
 
     printf("%s\n", is_prime(num, num/2) ? "YES" : "NO");
 
-	return 0;
+    return 0;
 }

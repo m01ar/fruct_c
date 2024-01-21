@@ -48,5 +48,5 @@ int acounter(void)
 int main(void)
 {
     printf("%d\n", acounter());
-	return 0;
+    return 0;
 }

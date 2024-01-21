@@ -30,10 +30,10 @@ int sumr(int n)
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+    int number;
+    scanf("%d", &number);
 
     printf("%d\n", sumr(number));
 
-	return 0;
+    return 0;
 }

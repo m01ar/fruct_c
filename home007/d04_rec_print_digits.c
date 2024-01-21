@@ -38,11 +38,11 @@ void print_num(int n)
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+    int number;
+    scanf("%d", &number);
 
     print_num(number);
     puts("");
 
-	return 0;
+    return 0;
 }

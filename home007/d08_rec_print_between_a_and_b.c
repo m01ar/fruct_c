@@ -34,11 +34,11 @@ void print_step(int a, int b)
 
 int main(void)
 {
-	int n1, n2;
-	scanf("%d%d", &n1, &n2);
+    int n1, n2;
+    scanf("%d%d", &n1, &n2);
 
     print_step(n1, n2);
     puts("");
 
-	return 0;
+    return 0;
 }

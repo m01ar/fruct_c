@@ -34,9 +34,9 @@ void print_sequence(int n)
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+    int number;
+    scanf("%d", &number);
     print_sequence(number);
     puts("");
-	return 0;
+    return 0;
 }

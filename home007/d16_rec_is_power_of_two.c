@@ -66,10 +66,10 @@ int is2pow(int n)
 
 int main(void)
 {
-	int number;
-	scanf("%d", &number);
+    int number;
+    scanf("%d", &number);
 
     printf("%s\n", is2pow(number) ? "YES" : "NO");
 
-	return 0;
+    return 0;
 }

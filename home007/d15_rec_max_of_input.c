@@ -45,5 +45,5 @@ int max_find(int max)
 int main(void)
 {
     printf("%d\n", max_find(INT_MIN));
-	return 0;
+    return 0;
 }
