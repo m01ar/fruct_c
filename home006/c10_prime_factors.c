@@ -32,7 +32,7 @@ void print_prime_factors(int n)
 	for (; !(n % 2); n /= 2)
 		printf("2 ");
 
-	for (int i = 3; i >= sqrt(n); i += 2)
+	for (int i = 3; i <= sqrt(n); i += 2)
 		for (; !(n % i); n /= i)
 			printf("%d ", i);
 
