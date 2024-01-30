@@ -21,7 +21,7 @@ E20 ДЗ *
 
 #include <stdio.h>
 
-#define BASE	10
+#define BASE    10
 
 /// Извлечение наибольшего по значению разряда числа
 /// Параметры:
@@ -103,8 +103,8 @@ int sort_digits(int n)
 
 int main(void)
 {
-	int n;
-	scanf("%d", &n);
+    int n;
+    scanf("%d", &n);
     printf("%d\n", sort_digits(n));
     return 0;
 }
