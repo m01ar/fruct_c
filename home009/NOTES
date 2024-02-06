@@ -1,0 +1,10 @@
+grep -P -A 1 '^F' README_full | sed -E -z 's/\n/ /g;s/-- /\n/g;s/$/\n/g;s/F([[:digit:]]) /F0\1 /g' | tr -s ' '
+
+expand -t 4 README | tr -s ' ' | awk '{$1=$1};1' | fold -w 80 -s | sponge README
+
+mkdir split && cd $_
+csplit -b '%02d_description' -f 'F' ../README '/^F/' {*}; rm F00*
+for i in F*; do (echo '/*'; head -n-3 $i; echo -e '*/\n'; cat template) > ../$i.c; rename _description '' ../*.c; done
+
+for k in *.c; do expand -t 4 $k | sponge $k; done
+
