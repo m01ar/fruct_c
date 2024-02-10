@@ -8,3 +8,5 @@ for i in F*; do (echo '/*'; head -n-3 $i; echo -e '*/\n'; cat template) > ../$i.
 
 for k in *.c; do expand -t 4 $k | sponge $k; done
 
+for k in F*.c; do head -3 $k | tail -2 | sed -z 's/\n/ (/g;s/ ($/)\n/g'; done
+
