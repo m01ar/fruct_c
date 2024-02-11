@@ -34,7 +34,7 @@ void sort_array(int size, int a[])
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "myAryFunc.h"
+#include "../mylib/myAryFunc.h"
 
 #define SIZE    5
 

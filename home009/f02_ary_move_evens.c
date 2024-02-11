@@ -32,7 +32,7 @@ void sort_even_odd(int n, int a[])
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "myAryFunc.h"
+#include "../mylib/myAryFunc.h"
 
 #define SIZE    5
 

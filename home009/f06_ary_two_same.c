@@ -30,7 +30,7 @@ int is_two_same(int size, int a[]);
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "myAryFunc.h"
+#include "../mylib/myAryFunc.h"
 
 #define SIZE    5
 
