@@ -24,7 +24,7 @@ E11 ДЗ 4
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "myAryFunc.h"
+#include "../mylib/myAryFunc.h"
 
 #define SIZE    10
 #define BASE    10

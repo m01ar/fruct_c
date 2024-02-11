@@ -20,7 +20,7 @@ E5
 */
 
 #include <stdio.h>
-#include "myAryFunc.h"
+#include "../mylib/myAryFunc.h"
 
 #define SIZE    10
 

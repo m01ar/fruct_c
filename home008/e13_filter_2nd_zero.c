@@ -20,7 +20,7 @@ E13 ДЗ 5
 */
 
 #include <stdio.h>
-#include "myAryFunc.h"
+#include "../mylib/myAryFunc.h"
 
 #define SIZE    10
 #define BASE    10

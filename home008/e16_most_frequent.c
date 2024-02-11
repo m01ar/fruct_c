@@ -21,7 +21,7 @@ E16 Д3 6
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "myAryFunc.h"
+#include "../mylib/myAryFunc.h"
 
 #define SIZE    10
 

@@ -23,7 +23,7 @@ E10 ДЗ 3
 */
 
 #include <stdio.h>
-#include "myAryFunc.h"
+#include "../mylib/myAryFunc.h"
 
 #define SIZE    12
 #define SHIFT   4

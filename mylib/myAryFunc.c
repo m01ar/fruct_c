@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//#define ARY_INPUT_GETCHAR_IMPLEMENTATION
+
 /// Ввод с клавиатуры элементов в массив типа int
 /// с выделением памяти по мере ввода.
 /// Параметры:
@@ -16,7 +18,7 @@ int aryInputDynInt(int **ary, int sz)
     int n;
     char sep;
 
-    while (scanf("%d%c", &n, &sep) == 2 && i < sz)
+    while (i < sz && (scanf("%d%c", &n, &sep) == 2))
     {
         (*ary)[i++] = n;
         if (sep == '\n')
@@ -26,7 +28,8 @@ int aryInputDynInt(int **ary, int sz)
         if (i == sz)
         {
             sz = sz*3/2;
-            if (NULL == (*ary = realloc(*ary, sz * sizeof(int))))
+            if (NULL == (*ary = realloc(*ary, 
+                            sz * sizeof(int))))
                 return 0;
         }
     }
@@ -40,22 +43,60 @@ int aryInputDynInt(int **ary, int sz)
 /// Возврат:
 ///   Количество элементов, записанных в массив
 
+#ifdef ARY_INPUT_GETCHAR_IMPLEMENTATION
+
 int aryInputInt(int ary[], int sz)
 {
-    int i = 0;
+    int count = sz;
+    char c;
+    int n = 0;
+
+    while(sz)
+    {
+        c = getchar();
+//        printf("char: 0x%02x ", c);
+        if (c >= '0' && c <= '9')
+        {
+            if (n)
+                n *= 10;
+            n += (c - '0');
+//            printf("n=%d\n", n);
+        }
+        else if (c == ' ' || c == '\n') 
+        {
+//            puts("- space");
+            ary[count-sz] = n;
+            sz--;
+            n = 0;
+        }
+        if (c == '\n')
+            break;
+    }
+    return count - sz;
+}
+
+#else
+
+int aryInputInt(int ary[], int sz)
+{
+    int count = sz;
     int n;
     char sep;
 
-    while (scanf("%d%c", &n, &sep) == 2 && i < sz)
+    while (sz && (scanf("%d%c", &n, &sep) == 2))
     {
-        ary[i++] = n;
+//        printf("a[%d] <- %d\n", count-sz, n);
+        ary[count-sz] = n;
+        sz--;
         if (sep == '\n')
             break;
         if (sep != ' ')
             return -1;
     }
-    return i;
+    return count - sz;
 }
+
+#endif
 
 /// Вывод на экран элементов массива типа int
 /// Параметры:

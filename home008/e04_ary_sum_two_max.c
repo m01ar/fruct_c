@@ -25,7 +25,7 @@ E4 Демо 1
 
 #include <stdio.h>
 #include <limits.h>
-#include "myAryFunc.h"
+#include "../mylib/myAryFunc.h"
 
 #define SIZE    10
 
