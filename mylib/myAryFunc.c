@@ -50,24 +50,24 @@ int aryInputInt(int ary[], int sz)
     int count = sz;
     char c;
     int n = 0;
+    int sign = 1;
 
-    while(sz)
+    while(sz && (c = getchar()))
     {
-        c = getchar();
-//        printf("char: 0x%02x ", c);
-        if (c >= '0' && c <= '9')
+        if (c == '-')
+            sign = -1;
+        else if (c >= '0' && c <= '9')
         {
             if (n)
                 n *= 10;
             n += (c - '0');
-//            printf("n=%d\n", n);
         }
         else if (c == ' ' || c == '\n') 
         {
-//            puts("- space");
-            ary[count-sz] = n;
+            ary[count-sz] = n * sign;
             sz--;
             n = 0;
+            sign = 1;
         }
         if (c == '\n')
             break;
@@ -85,7 +85,6 @@ int aryInputInt(int ary[], int sz)
 
     while (sz && (scanf("%d%c", &n, &sep) == 2))
     {
-//        printf("a[%d] <- %d\n", count-sz, n);
         ary[count-sz] = n;
         sz--;
         if (sep == '\n')
