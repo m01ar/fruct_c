@@ -8,7 +8,7 @@ fi
 
 mkdir build 2>/dev/null
 
-OPTS='-std=c99 -Wall -Werror -Wextra -Wpedantic'
+OPTS='-std=c99 -Wall -Werror -Wextra -Wpedantic -Wconversion'
 
 set -x
 while true
