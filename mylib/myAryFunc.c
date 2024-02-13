@@ -1,6 +1,7 @@
 #include "myAryFunc.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 //#define ARY_INPUT_GETCHAR_IMPLEMENTATION
 
@@ -12,9 +13,9 @@
 /// Возврат:
 ///   Количество элементов, записанных в массив
 
-int aryInputDynInt(int **ary, int sz)
+int aryInputDynInt(int **ary, size_t sz)
 {
-    int i = 0;
+    size_t i = 0; //int i = 0;
     int n;
     char sep;
 
@@ -33,7 +34,7 @@ int aryInputDynInt(int **ary, int sz)
                 return 0;
         }
     }
-    return i;
+    return (int)i;
 }
 
 /// Ввод с клавиатуры элементов в массив типа int

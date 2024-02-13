@@ -1,8 +1,9 @@
 #ifndef MY_ARY_FUNC_H
 #define MY_ARY_FUNC_H
 
-//int aryInputDynInt(int *, int);
-int aryInputDynInt(int **, int);
+#include <stddef.h>
+
+int aryInputDynInt(int **, size_t);//int);
 
 int aryInputInt(int *, int);
 
