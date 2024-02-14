@@ -1,7 +1,6 @@
 #include "myAryFunc.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <stddef.h>
 
 //#define ARY_INPUT_GETCHAR_IMPLEMENTATION
 
