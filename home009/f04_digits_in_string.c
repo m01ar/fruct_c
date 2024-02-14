@@ -48,13 +48,13 @@ int is_digit(char c)
 
 // Вычисляет длину строки
 
-int str_len(char *s)
+size_t str_len(char *s)
 {
     char *start = s;
     while (*s)
         s++;
 
-    return s - start;
+    return (size_t)(s - start);
 }
 
 // Выводит счетчики цифр в строке согласно заданию
