@@ -64,14 +64,14 @@ int input_cell(char *input)
 {
     char ch;
 
-    ch = getchar();
+    ch = (char)getchar();
     if ((ch >= 'a' && ch <= 'h') ||
         (ch >= 'A' && ch <= 'H'))
         input[0] = ch;
     else
         return 0;
 
-    ch = getchar();
+    ch = (char)getchar();
     if ((ch >= '1' && ch <= '8'))
         input[1] = ch;
     else
