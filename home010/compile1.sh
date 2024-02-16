@@ -6,7 +6,7 @@ then
     exit 1
 fi
 
-mkdir build 2>/dev/null
+#mkdir build 2>/dev/null
 
 OPTS='-std=c99 -Wall -Werror -Wextra -Wpedantic -Wconversion'
 
