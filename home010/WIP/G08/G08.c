@@ -26,16 +26,21 @@ G8 ДЗ 3 "Числа в массив"
 
 #define SIZE    1024
 
+#define MAXSTR  127
+#define ITEM_SZ 16
+
+#define STR(EXPR) #EXPR
+#define SCANSTR(LEN) "%" STR(LEN) "s"
+
 int readInts(char *buf, int *ary, size_t sz)
 {
 }
 
+#if 0
 size_t aryToBuf(
         char *buf, size_t bsz, // Строковой буфер
         int  *ary, size_t asz) // Массив чисел
 {
-    char item[64] = {0};
-    int  item_len = 0;
     size_t bi = 0;
     for (size_t ai = 0; ai < asz; ai++)
     {
@@ -45,6 +50,16 @@ size_t aryToBuf(
     }
     buf[bi++] = '\0';
     return bi;
+}
+#endif
+
+size_t aryToBuf(char *buf, const int *ary, size_t sz)
+{
+    char item[ITEM_SZ];
+    int item_len = 0;
+    for (size_t i = 0; i < sz; i++)
+    {
+    }
 }
 
 int main(void)
@@ -56,9 +71,9 @@ int main(void)
 
     printf("(%d) \"%s\"\n", len, buf);
 
-//    FILE *fp;
+#if 0
+    FILE *fp;
 
-/*
     fp = fopen(INFILE, "r+");
     if (!fp)
     {
@@ -67,16 +82,16 @@ int main(void)
     }
     fgets(buf, SIZE, fp);
     fclose(fp);
-*/
-/*
+
+
     if (!readInts(buf, SIZE, intAry, SIZE))
     {
         puts("No numbers");
         return EXIT_SUCCESS;
     }
-*/
+
 //    qsort();
-/*
+
     fp = fopen(OUTFILE, "w+");
     if (!fp)
     {
@@ -85,6 +100,7 @@ int main(void)
     }
     fputs(buf, fp);
     fclose(fp);
-*/
+
+#endif
     return EXIT_SUCCESS;
 }
